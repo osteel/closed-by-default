@@ -1,0 +1,40 @@
+name: Continuous integration
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  static:
+    name: Run static analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v3
+        with:
+          composer-options: "--no-scripts"
+
+      - name: Run PHP CS Fixer
+        run: ./vendor/bin/php-cs-fixer check -v --diff --stop-on-violation --allow-risky=yes
+
+      - name: Run Finalize Classes
+        run: ./vendor/bin/swiss-knife finalize-classes src --dry-run
+
+      - name: Run Rector
+        run: ./vendor/bin/rector --dry-run
+
+      - name: Run PHPStan
+        run: ./vendor/bin/phpstan analyse

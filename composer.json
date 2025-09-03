@@ -1,0 +1,42 @@
+{
+    "name": "osteel/closed-by-default",
+    "description": "Companion repository for the presentation on the Closed-by-Default Principle",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Osteel\\ClosedByDefault\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yannick Chenot",
+            "email": "yannick@yellowraincoat.co.uk"
+        }
+    ],
+    "require-dev": {
+        "rector/swiss-knife": "^2.3",
+        "friendsofphp/php-cs-fixer": "^3.88",
+        "phpstan/phpstan": "^2.1",
+        "rector/rector": "^2.1",
+        "phpstan/extension-installer": "^1.4",
+        "tomasvotruba/type-coverage": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "finalize": "./vendor/bin/swiss-knife finalize-classes src",
+        "phpcsfixer": "./vendor/bin/php-cs-fixer fix -v --allow-risky=yes",
+        "phpstan": "./vendor/bin/phpstan analyse",
+        "rector": "./vendor/bin/rector",
+        "static": [
+            "@finalize",
+            "@phpcsfixer",
+            "@rector",
+            "@phpstan"
+        ]
+    }
+}
