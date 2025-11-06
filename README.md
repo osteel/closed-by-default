@@ -14,7 +14,7 @@ In summary, the Closed-by-Default Principle removes dead ends from your mental m
 
 ## Slides
 
-Slides for the presentation: [closed-by-default.pdf](./assets/closed-by-default.pdf)
+Slides for the presentation: [escaping-the-code-maze.pdf](./slides/escaping-the-code-maze.pdf)
 
 ## How to
 
