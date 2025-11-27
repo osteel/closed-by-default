@@ -1,12 +1,12 @@
 # Closed-by-Default Principle
 
-Companion repository for the presentation on the Closed-by-Default Principle.
+Companion repository for presentations on the Closed-by-Default Principle.
 
 ## What is it?
 
 The Closed-by-Default Principle is a mindset for writing code that assumes everything should start out as constrained as possible, and only be opened up when there’s a concrete, proven need.
 
-For instance, instead of leaving methods `public`, classes inheritable, or properties mutable “just in case”, you declare them `final`, `private`, `readonly`, or strongly typed by default. This reduces the “cognitive surface” of your code: fewer paths to explore, fewer assumptions to keep in mind, and fewer opportunities for misuse.
+For instance, instead of leaving methods `public`, classes inheritable, or properties mutable _just in case_, you declare them `final`, `private`, `readonly`, or strongly typed by default. This reduces the _cognitive surface_ of your code: fewer paths to explore, fewer assumptions to keep in mind, and fewer opportunities for misuse.
 
 When change is required, you deliberately open a piece of code by loosening a restriction, signalling to future developers that it was an intentional choice. Over time, this practice produces code bases that are safer, clearer, and easier to evolve – because openness is the exception, not the rule.
 
@@ -14,7 +14,7 @@ In summary, the Closed-by-Default Principle removes dead ends from your mental m
 
 ## Slides
 
-Slides for the presentation: [escaping-the-code-maze.pdf](./slides/escaping-the-code-maze.pdf)
+You will find the slide decks used for various events in [this folder](./slides).
 
 ## How to
 
