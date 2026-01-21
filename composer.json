@@ -14,13 +14,16 @@
             "email": "yannick@yellowraincoat.co.uk"
         }
     ],
+    "require": {
+        "php": "^8.5"
+    },
     "require-dev": {
         "rector/swiss-knife": "^2.3",
-        "friendsofphp/php-cs-fixer": "^3.88",
+        "friendsofphp/php-cs-fixer": "^3.92",
         "phpstan/phpstan": "^2.1",
         "rector/rector": "^2.1",
         "phpstan/extension-installer": "^1.4",
-        "tomasvotruba/type-coverage": "^2.0"
+        "tomasvotruba/type-coverage": "^2.1"
     },
     "config": {
         "allow-plugins": {
