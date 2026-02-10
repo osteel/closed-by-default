@@ -9,6 +9,5 @@ return (new PhpCsFixer\Config())
     ->setRules([
         '@PER-CS' => true,
         'protected_to_private' => true,
-        'declare_strict_types' => true,
     ])
     ->setFinder($finder);

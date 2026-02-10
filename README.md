@@ -71,13 +71,13 @@ This brings consistency and predictability to the code, and alignment to the tea
 
 ### Force strict types declaration
 
-* Tool: [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
-* Rule: [declare_strict_types](https://cs.symfony.com/doc/rules/strict/declare_strict_types.html)
-* Configuration: [.phpcs-fixer.dist.php](./.phpcs-fixer.dist.php)
+* Tool: [Rector](https://github.com/rectorphp/rector)
+* Rule: [SafeDeclareStrictTypesRector](https://getrector.com/rule-detail/safe-declare-strict-types-rector)
+* Configuration: [rector.php](./rector.php)
 * Usage:
 
 ```shell
-./vendor/bin/php-cs-fixer fix -v --allow-risky=yes
+./vendor/bin/rector
 ```
 
 ### Fix missing type hints
