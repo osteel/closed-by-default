@@ -28,7 +28,7 @@ jobs:
           composer-options: "--no-scripts"
 
       - name: Run PHP CS Fixer
-        run: ./vendor/bin/php-cs-fixer check -v --diff --stop-on-violation --allow-risky=yes
+        run: ./vendor/bin/php-cs-fixer check -v --diff --stop-on-violation
 
       - name: Run Finalize Classes
         run: ./vendor/bin/swiss-knife finalize-classes src --dry-run

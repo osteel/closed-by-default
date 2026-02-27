@@ -32,7 +32,7 @@
     },
     "scripts": {
         "finalize": "./vendor/bin/swiss-knife finalize-classes src",
-        "phpcsfixer": "./vendor/bin/php-cs-fixer fix -v --allow-risky=yes",
+        "phpcsfixer": "./vendor/bin/php-cs-fixer fix -v",
         "phpstan": "./vendor/bin/phpstan analyse",
         "rector": "./vendor/bin/rector",
         "static": [
