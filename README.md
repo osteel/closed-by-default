@@ -40,23 +40,35 @@ This brings consistency and predictability to the code, and alignment to the tea
 
 ### Enforce visibility declaration
 
-* Tool: [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
+* Tool: either [Pint](https://github.com/laravel/pint) or [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) directly
 * Rule: [modifier_keywords](https://cs.symfony.com/doc/rules/class_notation/modifier_keywords.html)
-* Configuration: [.phpcs-fixer.dist.php](./.phpcs-fixer.dist.php) (included in the [@PER-CS ruleset](https://cs.symfony.com/doc/ruleSets/PER-CS.html))
+* Configuration:
+  * Pint: [pint.json](./pint.json) (included in the [`laravel` preset](https://laravel.com/docs/pint#presets))
+  * PHP CS Fixer: [.php-cs-fixer.dist.php](./.php-cs-fixer.dist.php) (included in the [@PER-CS ruleset](https://cs.symfony.com/doc/ruleSets/PER-CS.html))
 * Usage:
 
 ```shell
+# Pint
+./vendor/bin/pint
+
+# PHP CS Fixer
 ./vendor/bin/php-cs-fixer fix -v
 ```
 
 ### Privatise variables and methods
 
-* Tool: [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
+* Tool: either [Pint](https://github.com/laravel/pint) or [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) directly
 * Rule: [protected_to_private](https://cs.symfony.com/doc/rules/class_notation/protected_to_private.html)
-* Configuration: [.phpcs-fixer.dist.php](./.phpcs-fixer.dist.php)
+* Configuration:
+  * Pint: [pint.json](./pint.json)
+  * PHP CS Fixer: [.phpcs-fixer.dist.php](./.phpcs-fixer.dist.php)
 * Usage:
 
 ```shell
+# Pint
+./vendor/bin/pint
+
+# PHP CS Fixer
 ./vendor/bin/php-cs-fixer fix -v
 ```
 

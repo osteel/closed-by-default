@@ -23,7 +23,8 @@
         "phpstan/phpstan": "^2.1",
         "rector/rector": "^2.1",
         "phpstan/extension-installer": "^1.4",
-        "tomasvotruba/type-coverage": "^2.1"
+        "tomasvotruba/type-coverage": "^2.1",
+        "laravel/pint": "^1.29"
     },
     "config": {
         "allow-plugins": {
@@ -34,10 +35,12 @@
         "finalize": "./vendor/bin/swiss-knife finalize-classes src",
         "phpcsfixer": "./vendor/bin/php-cs-fixer fix -v",
         "phpstan": "./vendor/bin/phpstan analyse",
+        "pint": "./vendor/bin/pint",
         "rector": "./vendor/bin/rector",
         "static": [
             "@finalize",
             "@phpcsfixer",
+            "@pint",
             "@rector",
             "@phpstan"
         ]

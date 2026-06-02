@@ -1,0 +1,6 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "protected_to_private": true
+    }
+}

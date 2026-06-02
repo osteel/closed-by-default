@@ -8,7 +8,7 @@ use Rector\Set\ValueObject\SetList;
 use Rector\TypeDeclaration\Rector\StmtsAwareInterface\SafeDeclareStrictTypesRector;
 
 return RectorConfig::configure()
-    ->withPaths([__DIR__ . '/src'])
+    ->withPaths([__DIR__.'/src'])
     ->withSets([
         SetList::TYPE_DECLARATION,
         LevelSetList::UP_TO_PHP_85,

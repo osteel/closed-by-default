@@ -18,6 +18,7 @@ final readonly class Dog
     public function fetch(Ball $item): Ball
     {
         $this->bark();
+
         return $item;
     }
 }
