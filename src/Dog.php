@@ -8,7 +8,7 @@ final readonly class Dog
 {
     private const string SOUND = 'Woof';
 
-    public function __construct(public string $name, private(set) ?int $microchipId) {}
+    public function __construct(public string $name, public private(set) ?int $microchipId) {}
 
     private function bark(): void
     {
